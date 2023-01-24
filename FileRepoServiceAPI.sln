@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileRepoServiceAPI", "FileRepoServiceAPI\FileRepoServiceAPI.csproj", "{74E52AA5-F301-4C89-9B62-72A5886B768E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileRepoApiTestProject", "FileRepoApiTestProject\FileRepoApiTestProject.csproj", "{275216F9-50D1-4685-B7D8-51AC3E951103}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74E52AA5-F301-4C89-9B62-72A5886B768E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E52AA5-F301-4C89-9B62-72A5886B768E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E52AA5-F301-4C89-9B62-72A5886B768E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E52AA5-F301-4C89-9B62-72A5886B768E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275216F9-50D1-4685-B7D8-51AC3E951103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275216F9-50D1-4685-B7D8-51AC3E951103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275216F9-50D1-4685-B7D8-51AC3E951103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275216F9-50D1-4685-B7D8-51AC3E951103}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77B98A98-2088-466C-AD28-71CC01901C42}
+	EndGlobalSection
+EndGlobal

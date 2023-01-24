@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FileRepoServiceApi\**" />
+    <Compile Remove="FileRepoSrviceApi\**" />
+    <Content Remove="FileRepoServiceApi\**" />
+    <Content Remove="FileRepoSrviceApi\**" />
+    <EmbeddedResource Remove="FileRepoServiceApi\**" />
+    <EmbeddedResource Remove="FileRepoSrviceApi\**" />
+    <None Remove="FileRepoServiceApi\**" />
+    <None Remove="FileRepoSrviceApi\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\FileItemsController.cs" />
+    <Compile Remove="Controllers\FileRepoController.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="Services\FileService.cs" />
+    <Compile Remove="Services\IFileService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\WeatherForecastController.fs" />
+    <None Remove="Migrations.zip" />
+    <None Remove="WeatherForecast.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+</Project>
