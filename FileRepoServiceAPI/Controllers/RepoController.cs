@@ -1,4 +1,4 @@
-﻿using FileRepoServiceApi.Models;
+using FileRepoServiceApi.Models;
 using FileRepoServiceApi.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -49,6 +49,31 @@ namespace FileRepoServiceApi.Controllers
 
             return Ok(result);
         }
+
+        [HttpPost("restoresoftdelete")]
+        [ProducesResponseType(typeof(Result<bool>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Result<bool>), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> RestoreSoftDeleteFileAsync(string fullFileName, float version)
+        {
+            var result = await _repoService.RestoreSoftDeleteAsync(fullFileName, version);
+
+            if (!result.Success) return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        [HttpGet("getsoftdeletions")]
+        [ProducesResponseType(typeof(Result<IEnumerable<FileItem>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Result<IEnumerable<FileItem>>), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetSoftDeletionsAsync()
+        {
+            var result = await _repoService.GetSoftDeletionsAsync();
+
+            if (!result.Success) return BadRequest(result);
+
+            return Ok(result);
+        }
+
 
         [HttpDelete("purgedeletions")]
         [ProducesResponseType(typeof(Result<bool>), StatusCodes.Status200OK)]
